@@ -7,7 +7,7 @@ function run() {
     const distFolder = core.getInput('dist-folder', {required: true});
 
     const s3Uri = `s3://${bucketName}`
-    exec.exec(`awx s3 sync ${distFolder} ${s3Uri} --region${bucketName}`);
+    exec.exec(`aws s3 sync ${distFolder} ${s3Uri} --region${bucketRegion}`);
     core.notice('Hello from my custom java Action!');
 }
 
