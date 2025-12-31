@@ -59,7 +59,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist-files
-          path: ./dist
+          path: dist
       - name: Output contents
         run: ls
       - name: Deploy site
@@ -69,5 +69,5 @@ jobs:
         uses: ./.github/actions/deploy-s3-javascript
         with:
           bucket-name: gha-custom-ation-hosting
-          dist-folder: ./dist
+          dist-folder: dist
 
