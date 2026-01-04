@@ -70,7 +70,8 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v5.1.1
         with:
           aws-region: us-east-2
-          role-to-assume: arn:aws:iam::aws:policy/AmazonS3FullAccess
+          role-to-assume: arn:aws:iam::794550283567:role/githaction_policy
+          role-session-name: github__actions
       - name: Deploy site
         id: site-Deployment
         uses: ./.github/actions/deploy-s3-docker
